@@ -15,10 +15,9 @@ if(isset($message)){
    <div class="header-1">
       <div class="flex">
          <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
+            <a href="https://www.facebook.com/nisakacomics" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/nisakacomicsrd/" class="fab fa-instagram"></a>
+            <a href="https://www.instagram.com/mangastoprd/" class="fab fa-instagram"></a>
          </div>
          <p> new <a href="login">login</a> | <a href="register">register</a> </p>
       </div>
@@ -29,11 +28,11 @@ if(isset($message)){
          <a href="home.php" class="logo">Shimeji</a>
 
          <nav class="navbar">
-            <a href="home.php">home</a>
-            <a href="about">about</a>
-            <a href="shop.php">shop</a>
-            <a href="email">contact</a>
-            <a href="orders">orders</a>
+            <a href="home.php">Inicio</a>
+            <a href="about">Nosotros</a>
+            <a href="shop.php">Tienda</a>
+            <a href="email">Contacto</a>
+            <a href="orders">Ordernes</a>
          </nav>
 
          <div class="icons">

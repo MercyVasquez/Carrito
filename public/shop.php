@@ -42,7 +42,7 @@ if(isset($_POST['add_to_cart'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/shop.css">
 
 </head>
 <body>
@@ -50,13 +50,13 @@ if(isset($_POST['add_to_cart'])){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>our shop</h3>
-   <p> <a href="home.php">home</a> / shop </p>
+   <h3>Nuestra tienda</h3>
+   <p> <a href="home.php">Inicio</a> / Tienda </p>
 </div>
 
 <section class="products">
 
-   <h1 class="title">latest products</h1>
+   <h1 class="title">Nuestros productos</h1>
 
    <div class="box-container">
 
@@ -73,7 +73,7 @@ if(isset($_POST['add_to_cart'])){
       <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
       <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
       <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
-      <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+      <input type="submit" value="Agregar +" name="add_to_cart" class="btn">
      </form>
       <?php
          }

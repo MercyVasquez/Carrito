@@ -63,7 +63,7 @@ if(isset($_POST['order_btn'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/checkout.css">
 
 </head>
 <body>
@@ -71,8 +71,8 @@ if(isset($_POST['order_btn'])){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>checkout</h3>
-   <p> <a href="home.php">home</a> / checkout </p>
+   <h3>Caja</h3>
+   <p> <a href="home.php">Inicio</a> / caja </p>
 </div>
 
 <section class="display-order">
@@ -99,7 +99,7 @@ if(isset($_POST['order_btn'])){
 <section class="checkout">
 
    <form action="" method="post">
-      <h3>place your order</h3>
+      <h3>Haga su pedido</h3>
       <div class="flex">
          <div class="inputBox">
             <span>Tu nombre :</span>
@@ -147,7 +147,7 @@ if(isset($_POST['order_btn'])){
             <input type="number" min="0" name="pin_code" required placeholder="ej. 123456">
          </div>
       </div>
-      <input type="submit" value="order now" class="btn" name="order_btn">
+      <input type="submit" value="ordera ahora" class="btn" name="order_btn">
    </form>
 
 </section>

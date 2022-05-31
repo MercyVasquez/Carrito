@@ -24,7 +24,7 @@ if(!isset($user_id)){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/orders.css">
 
 </head>
 <body>
@@ -32,13 +32,13 @@ if(!isset($user_id)){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>your orders</h3>
-   <p> <a href="home.php">home</a> / orders </p>
+   <h3>Tus ordenes</h3>
+   <p> <a href="home.php">Inicio</a> / ordenes </p>
 </div>
 
 <section class="placed-orders">
 
-   <h1 class="title">placed orders</h1>
+   <h1 class="title">Pedidos realizados</h1>
 
    <div class="box-container">
 
@@ -48,15 +48,15 @@ if(!isset($user_id)){
             while($fetch_orders = mysqli_fetch_assoc($order_query)){
       ?>
       <div class="box">
-         <p> placed on : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
-         <p> name : <span><?php echo $fetch_orders['name']; ?></span> </p>
-         <p> number : <span><?php echo $fetch_orders['number']; ?></span> </p>
-         <p> email : <span><?php echo $fetch_orders['email']; ?></span> </p>
-         <p> address : <span><?php echo $fetch_orders['address']; ?></span> </p>
-         <p> payment method : <span><?php echo $fetch_orders['method']; ?></span> </p>
-         <p> your orders : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-         <p> total price : <span>$<?php echo $fetch_orders['total_price']; ?>/-</span> </p>
-         <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
+         <p> Echo el : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
+         <p> Nombre : <span><?php echo $fetch_orders['name']; ?></span> </p>
+         <p> Numero : <span><?php echo $fetch_orders['number']; ?></span> </p>
+         <p> Email : <span><?php echo $fetch_orders['email']; ?></span> </p>
+         <p> Direccion : <span><?php echo $fetch_orders['address']; ?></span> </p>
+         <p> Metodo : <span><?php echo $fetch_orders['method']; ?></span> </p>
+         <p> Ordenes : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
+         <p> total a pagar : <span>$<?php echo $fetch_orders['total_price']; ?>/-</span> </p>
+         <p> Estado: <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
          </div>
       <?php
        }
