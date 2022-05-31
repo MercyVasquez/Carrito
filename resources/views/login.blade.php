@@ -4,13 +4,11 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>login</title>
+   <title>Login</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="icon" href="images/Logo.jpg" type="image/x-icon">
+   <link rel="stylesheet" href="css/login.css">
 
 </head>
 <body>
@@ -27,17 +25,21 @@ if(isset($message)){
    }
 }
 ?>
-   
-<div class="form-container">
-
-   <form action="login.php" method="post">
-      <h3>login now</h3>
-      <input type="email" name="email" placeholder="enter your email" required class="box">
-      <input type="password" name="password" placeholder="enter your password" required class="box">
-      <input type="submit" name="submit" value="login now" class="btn">
-      <p>don't have an account? <a href="register">register now</a></p>
-   </form>
-
+   <div class="form-container">
+   <div class="login-container">
+          <div class="login-info-container">
+            <h1 class="title">Entrar</h1>
+            <p>Inicia sesion</p>
+            <form class="inputs-container" action="login.php" method="POST">
+            @csrf
+                <input class="input" type="email" placeholder="Gmail" name="email" required>
+                <input class="input" type="password" placeholder="Contraseña" name="password" required>
+                <input type="submit" name="submit" value="Entrar" class="btn">
+                <p>Ya tienes una cuenta? <span class="span"><a href="register">Click aqui!</a></span></p>
+            </form>
+          </div>
+            <img class="image-container" src="images/844213.png" alt="">
+      </div>
 </div>
 
 </body>

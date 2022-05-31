@@ -4,13 +4,14 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>register</title>
+   <title>Registro</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <!--Css y fa -->
+   <script src="https://kit.fontawesome.com/4437f1e5d2.js" crossorigin="anonymous"></script>
+   <link rel="icon" href="images/loguito.png">
+   <link rel="stylesheet" href="css/registro.css">
 
 </head>
 <body>
@@ -31,21 +32,22 @@ if(isset($message)){
 ?>
    
 <div class="form-container">
-
-   <form action="register.php" method="post">
-      <h3>register now</h3>
-      <input type="text" name="name" placeholder="enter your name" required class="box">
-      <input type="email" name="email" placeholder="enter your email" required class="box">
-      <input type="password" name="password" placeholder="enter your password" required class="box">
-      <input type="password" name="cpassword" placeholder="confirm your password" required class="box">
-      <select name="user_type" class="box">
-         <option value="user">user</option>
-         <option value="admin">admin</option> 
-      </select>
-      <input type="submit" name="submit" value="register now" class="btn">
-      <p>already have an account? <a href="login">login now</a></p>
-   </form>
-
+   <div class="login-container">
+          <div class="login-info-container">
+            <h1 class="title">Registrate</h1>
+            <p>Crea tu cuenta</p>
+            <form class="inputs-container" action="register.php" method="POST">
+            @csrf
+                <input class="input" type="text" placeholder="Usuario" name="name" required>
+                <input class="input" type="email" placeholder="Gmail" name="email" required>
+                <input class="input" type="password"placeholder="Contraseña" name="password" required>
+                <input class="input" type="password" placeholder="Confirma Contraseña" name="cpassword" required>
+                <input type="submit" name="submit" value="Registrate" class="btn">
+                <p>Ya tienes una cuenta? <span class="span"><a href="login">Click aqui!</a></span></p>
+            </form>
+          </div>
+          <img class="image-container" src="images/registerimage.jpg" alt="">
+      </div>
 </div>
 
 </body>

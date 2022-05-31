@@ -23,7 +23,7 @@ if(!isset($user_id)){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/contact.css">
 
 </head>
 <body>
@@ -31,10 +31,12 @@ if(!isset($user_id)){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>contact us</h3>
-   <p> <a href="home.php">home</a> / contact </p>
+   <h3>Contactanos</h3>
+   <p> <a href="home.php">Inicio</a> / contacto </p>
 </div>
-
+<br>
+<br>
+<br>
 <section class="contact">
 
    <form action="{{route('composeEmail')}}" method="post" enctype="multipart/form-data">

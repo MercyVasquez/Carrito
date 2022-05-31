@@ -12,7 +12,6 @@ if(isset($message)){
 ?>
 
 <header class="header">
-
    <div class="header-1">
       <div class="flex">
          <div class="share">
