@@ -43,15 +43,15 @@ if(isset($_GET['delete'])){
 
    <div class="box-container">
       <?php
-         $select_users = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
+         $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE user_type ='user'") or die('query failed');
          while($fetch_users = mysqli_fetch_assoc($select_users)){
       ?>
       <div class="box">
          <p> user id : <span><?php echo $fetch_users['id']; ?></span> </p>
          <p> username : <span><?php echo $fetch_users['name']; ?></span> </p>
          <p> email : <span><?php echo $fetch_users['email']; ?></span> </p>
-         <p> user type : <span style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo '#c7963c'; } ?>"><?php echo $fetch_users['user_type']; ?></span> </p>
-         <a href="admin_users?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">delete user</a>
+         <p> user type : <span><?php echo $fetch_users['user_type']; ?></span> </p>
+         <a href="admin_users?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('eliminar usuario?');" class="delete-btn">delete user</a>
       </div>
       <?php
          };
