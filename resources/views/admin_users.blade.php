@@ -24,7 +24,7 @@ if(isset($_GET['delete'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>users</title>
+   <title>Cuentas de Usuarios</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -39,7 +39,7 @@ if(isset($_GET['delete'])){
 
 <section class="users">
 
-   <h1 class="title"> user accounts </h1>
+   <h1 class="title"> Cuentas de Usuario </h1>
 
    <div class="box-container">
       <?php
@@ -47,10 +47,10 @@ if(isset($_GET['delete'])){
          while($fetch_users = mysqli_fetch_assoc($select_users)){
       ?>
       <div class="box">
-         <p> user id : <span><?php echo $fetch_users['id']; ?></span> </p>
-         <p> username : <span><?php echo $fetch_users['name']; ?></span> </p>
+         <p>  Id Usuario : <span><?php echo $fetch_users['id']; ?></span> </p>
+         <p> Usuario : <span><?php echo $fetch_users['name']; ?></span> </p>
          <p> email : <span><?php echo $fetch_users['email']; ?></span> </p>
-         <p> user type : <span><?php echo $fetch_users['user_type']; ?></span> </p>
+         <p> Tipo de Usuario : <span><?php echo $fetch_users['user_type']; ?></span> </p>
          <a href="admin_users?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('eliminar usuario?');" class="delete-btn">delete user</a>
       </div>
       <?php

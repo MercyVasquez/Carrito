@@ -101,14 +101,14 @@ if(isset($_POST['update_product'])){
 
 <section class="add-products">
 
-   <h1 class="title">shop products</h1>
+   <h1 class="title">Control productos</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>add product</h3>
-      <input type="text" name="name" class="box" placeholder="enter product name" required>
-      <input type="number" min="0" name="price" class="box" placeholder="enter product price" required>
+      <h3>Agregar manga</h3>
+      <input type="text" name="name" class="box" placeholder="Nombre del manga" required>
+      <input type="number" min="0" name="price" class="box" placeholder="Precio del manga" required>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
-      <input type="submit" value="add product" name="add_product" class="btn">
+      <input type="submit" value="Agregar manga" name="add_product" class="btn">
    </form>
 
 </section>
@@ -129,9 +129,10 @@ if(isset($_POST['update_product'])){
       <div class="box">
          <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
          <div class="name"><?php echo $fetch_products['name']; ?></div>
+         <div class="name"><?php echo 'Stock: ', $fetch_products['stock']; ?></div>
          <div class="price">$<?php echo $fetch_products['price']; ?>/-</div>
-         <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">update</a>
-         <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+         <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">Modifica</a>
+         <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">Elimina</a>
       </div>
       <?php
          }
@@ -156,11 +157,11 @@ if(isset($_POST['update_product'])){
       <input type="hidden" name="update_p_id" value="<?php echo $fetch_update['id']; ?>">
       <input type="hidden" name="update_old_image" value="<?php echo $fetch_update['image']; ?>">
       <img src="uploaded_img/<?php echo $fetch_update['image']; ?>" alt="">
-      <input type="text" name="update_name" value="<?php echo $fetch_update['name']; ?>" class="box" required placeholder="enter product name">
-      <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0" class="box" required placeholder="enter product price">
+      <input type="text" name="update_name" value="<?php echo $fetch_update['name']; ?>" class="box" required placeholder="Nombre del manga">
+      <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0" class="box" required placeholder="Precio del manga">
       <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png">
-      <input type="submit" value="update" name="update_product" class="btn">
-      <input type="reset" value="cancel" id="close-update" class="option-btn">
+      <input type="submit" value="Aceptar" name="update_product" class="btn">
+      <input type="reset" value="cancelar" id="close-update" class="option-btn">
    </form>
    <?php
          }
@@ -171,7 +172,6 @@ if(isset($_POST['update_product'])){
    ?>
 
 </section>
-
 
 
 

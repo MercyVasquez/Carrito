@@ -58,15 +58,8 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
 Route::get('email', [MailerController::class, 'email'])->name('email'); 
 
 Route::post('composeEmail', [MailerController::class, 'composeEmail'])->name('composeEmail');

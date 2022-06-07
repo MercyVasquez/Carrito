@@ -17,7 +17,8 @@ if(!isset($user_id)){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>contact</title>
+   <title>SHIMEJIRD</title>
+   <link rel="shortcut icon" href="images/loguito.png" type="image/x-icon">
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -38,21 +39,21 @@ if(!isset($user_id)){
 <br>
 <br>
 <section class="contact">
-
    <form action="{{route('composeEmail')}}" method="post" enctype="multipart/form-data">
 @csrf
 
-@if(Session::has("success"))
-<div class="alert alert-success alert-dismissible"><button type="button" class="close">&times;</button>{{Session::get('success')}}</div>
-@elseif(Session::has("failed"))
-<div class="alert alert-danger alert-dismissible"><button type="button" class="close">&times;</button>{{Session::get('failed')}}</div>
-@endif
+
       <h3>Cuentanos tus dudas!</h3>
-      <input type="email" name="emailRecipient" required placeholder="enter your name" class="box" value="mercidalmanzar@gmail.com" readonly>
+      <input type="email" name="emailRecipient" required placeholder="enter your name" class="box" value="mercidalmanzar@gmail.com" hidden>
       <input type="text" name="emailSubject" required placeholder="enter your email" class="box">
-      <textarea name="emailBody" class="box" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+      <textarea name="emailBody" class="box" placeholder="enter your message" id="" cols="30" rows="10" required></textarea>
       <input class="box" type="file" name="emailAttachments[]" multiple="multiple">
       <input type="submit" value="send message" name="send" class="btn">
+      @if(Session::has("success"))
+      <div class="alert alert-success alert-dismissible"><button type="button" class="close">&times;</button>{{Session::get('success')}}</div>
+      @elseif(Session::has("failed"))
+      <div class="alert alert-danger alert-dismissible"><button type="button" class="close">&times;</button>{{Session::get('failed')}}</div>
+      @endif
    </form>
 
 </section>

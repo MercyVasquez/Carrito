@@ -31,7 +31,7 @@ if(isset($_POST['order_btn'])){
       }
    }
 
-   $total_products = implode(', ',$cart_products);
+   $total_products = implode(', ', $cart_products);
 
    $order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE name = '$name' AND number = '$number' AND email = '$email' AND method = '$method' AND address = '$address' AND total_products = '$total_products' AND total_price = '$cart_total'") or die('query failed');
 
@@ -57,8 +57,8 @@ if(isset($_POST['order_btn'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>checkout</title>
-
+   <title>SHIMEJIRD</title>
+   <link rel="shortcut icon" href="images/loguito.png" type="image/x-icon">
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 

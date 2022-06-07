@@ -18,8 +18,8 @@ if(!isset($user_id)){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Quienes Somos</title>
-   <link rel="icon" href="images/Logo.jpg" type="image/x-icon">
+   <title>SHIMEJIRD</title>
+   <link rel="shortcut icon" href="images/loguito.png" type="image/x-icon">
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -34,7 +34,7 @@ if(!isset($user_id)){
 
 <div class="heading">
    <h3>Sobre nosotros</h3>
-   <p> <a href="home.php">Inicio</a> / Registrate </p>
+   <p> <a href="home.php">Inicio</a> / nosotros </p>
 </div>
 <br>
 <br>
@@ -44,7 +44,7 @@ if(!isset($user_id)){
    <div class="flex">
 
       <div class="image">
-         <img src="images/QS.jpg" alt="">
+         <img src="images/anime2.gif" alt="">
       </div>
 
       <div class="content">
@@ -56,6 +56,37 @@ if(!isset($user_id)){
 
    </div>
 
+</section>
+
+<section class="review">
+   
+<div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Nathan D.</div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+<div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Mary Will</div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+<div class="review">
+   <div class="head-review">
+      <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
+   </div>
+   <div class="body-review">
+      <div class="name-review">Kevin Tuck</div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
 </section>
 
 <section class="Maps">

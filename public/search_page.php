@@ -7,7 +7,7 @@ session_start();
 $user_id = $_SESSION['user_id'];
 
 if(!isset($user_id)){
-   header('location:login.php');
+   header('location:login');
 };
 
 if(isset($_POST['add_to_cart'])){
@@ -36,13 +36,14 @@ if(isset($_POST['add_to_cart'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>search page</title>
+   <title>SHIMEJIRD</title>
+   <link rel="shortcut icon" href="images/loguito.png" type="image/x-icon">
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/search.css">
 
 </head>
 <body>
@@ -50,13 +51,13 @@ if(isset($_POST['add_to_cart'])){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>search page</h3>
-   <p> <a href="home.php">home</a> / search </p>
+   <h3>Busca aqui</h3>
+   <p> <a href="home.php">Inicio</a> / buscar </p>
 </div>
 
 <section class="search-form">
    <form action="" method="post">
-      <input type="text" name="search" placeholder="search products..." class="box">
+      <input type="text" name="search" placeholder="busca producto..." class="box">
       <input type="submit" name="submit" value="search" class="btn">
    </form>
 </section>

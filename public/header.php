@@ -19,13 +19,13 @@ if(isset($message)){
             <a href="https://www.instagram.com/nisakacomicsrd/" class="fab fa-instagram"></a>
             <a href="https://www.instagram.com/mangastoprd/" class="fab fa-instagram"></a>
          </div>
-         <p> new <a href="login">login</a> | <a href="register">register</a> </p>
+         <p> nuevo <a href="login">login</a> | <a href="register">register</a> </p>
       </div>
    </div>
 
    <div class="header-2">
       <div class="flex">
-         <a href="home.php" class="logo">Shimeji</a>
+         <a href="home.php" class="logo">SHIMEJIRD</a>
 
          <nav class="navbar">
             <a href="home.php">Inicio</a>

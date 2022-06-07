@@ -24,13 +24,6 @@ if(isset($_GET['delete'])){
    mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$delete_id'") or die('query failed');
    header('location:admin_orders.php');
 }
-
-if(isset($_GET['print'])){
-   $print_id = $_GET['print'];
-   mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$delete_id'") or die('query failed');
-   header('location:admin_orders.php');
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -54,11 +47,12 @@ if(isset($_GET['print'])){
 
 <section class="orders">
 
-   <h1 class="title">Pedidos</h1>
+   <h1 class="title">Facturas</h1>
 
    <div class="box-container">
       <?php
-      $select_orders = mysqli_query($conn, "SELECT * FROM `orders`") or die('query failed');
+      $print_id = $_GET['print'];
+      $select_orders = mysqli_query($conn, "SELECT * FROM `orders` WHERE id = '$print_id'") or die('query failed');
       if(mysqli_num_rows($select_orders) > 0){
          while($fetch_orders = mysqli_fetch_assoc($select_orders)){
       ?>
@@ -81,7 +75,7 @@ if(isset($_GET['print'])){
             </select>
             <input type="submit" value="Modifica" name="update_order" class="option-btn">
             <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('print this order?');" class="delete-btn">Elimina</a>
-            <a href="print.php?print=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('print this order?');" class="option-btn">Factura</a>
+            <a href="" onClick="print();" class="option-btn"><i class="fa fa-print">Imprime</i></a>
          </form>
       </div>
       <?php
@@ -93,18 +87,3 @@ if(isset($_GET['print'])){
    </div>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-<!-- custom admin js file link  -->
-<script src="js/admin_script.js"></script>
-
-</body>
-</html>

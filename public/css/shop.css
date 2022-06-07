@@ -365,6 +365,11 @@ section{
    font-size: 2rem;
    color:#333;
 }
+.products .box-container .box p{
+   padding:1rem 0;
+   font-size: 17px;
+   color:#333;
+}
 
 .products .box-container .box .qty{
    width: 100%;
@@ -446,7 +451,10 @@ section{
 }
 
 
-
+p  
+{
+   font-size: x-small;
+}
 
 /* media queries  */
 
