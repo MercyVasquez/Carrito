@@ -50,35 +50,29 @@ if(!isset($user_id)){
 </section>
 <!-- Aqui la parte de descuento en novelas BL-->
 <!-- Aqui la parte de la review-->
-<section class="review">
-<div class="review">
-   <div class="head-review">
-      <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
-   </div>
-   <div class="body-review">
-      <div class="name-review">Nathan D.</div>
-      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
-   </div>
+<h1 class="title">Proximamente Webtoons</h1>
+
+<div class="container__slider">
+
+    <div class="container">
+        <input type="radio" name="slider" id="item-1"  checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+
+        <div class="cards">
+            <label class="card" for="item-1" id="selector-1">
+                <img src="https://swebtoon-phinf.pstatic.net/20210721_119/1626817818964FzTvJ_JPEG/thumbnail.jpg">
+            </label>
+            <label class="card" for="item-2" id="selector-2">
+                <img src="https://jernih.co/wp-content/uploads/bts-6.jpg">
+            </label>
+            <label class="card" for="item-3" id="selector-3">
+                <img src="https://img.wattpad.com/899858ead8db48b9b7288fb94ea8f01cc901b0ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6537306734506d4e4930742d42673d3d2d3638323734383639392e313537616133356638383963623231633338353835343432373131332e6a7067?s=fit&w=720&h=720">
+            </label>
+        </div>
+    </div>
+
 </div>
-<div class="review">
-   <div class="head-review">
-      <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
-   </div>
-   <div class="body-review">
-      <div class="name-review">Mary Will</div>
-      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
-   </div>
-</div>
-<div class="review">
-   <div class="head-review">
-      <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
-   </div>
-   <div class="body-review">
-      <div class="name-review">Kevin Tuck</div>
-      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
-   </div>
-</div>
-<section>
 <!-- Aqui el JS  -->
 <script src="js/script.js"></script>
 <script type="text/javascript">

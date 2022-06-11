@@ -23,6 +23,7 @@ if(isset($_POST['order_btn'])){
    $cart_products[] = '';
 
    $cart_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+
    if(mysqli_num_rows($cart_query) > 0){
       while($cart_item = mysqli_fetch_assoc($cart_query)){
          $cart_products[] = $cart_item['name'].' ('.$cart_item['quantity'].') ';
@@ -38,9 +39,16 @@ if(isset($_POST['order_btn'])){
    if($cart_total == 0){
       $message[] = 'your cart is empty';
    }else{
-      if(mysqli_num_rows($order_query) > 0){
-         $message[] = 'order already placed!'; 
-      }else{
+      $pro_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+
+      if(mysqli_num_rows($pro_query) > 0){
+         while($pro_item = mysqli_fetch_assoc($pro_query)){
+            $name_pro = $pro_item['name'];
+            $cant_pro = $pro_item['quantity'];
+            //mysqli_query($conn,"UPDATE `products` SET stock=stock - $cant_pro WHERE name=$name_pro");
+            mysqli_query($conn,"UPDATE `products` SET stock=stock - $cant_pro WHERE name='$name_pro'") or die('query failed');
+         }
+
          mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
          $message[] = 'order placed successfully!';
          mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
@@ -89,7 +97,7 @@ if(isset($_POST['order_btn'])){
    <?php
       }
    }else{
-      echo '<p class="empty">your cart is empty</p>';
+      echo '<p class="empty">No haz agregado nada >:I </p>';
    }
    ?>
    <div class="grand-total"> gran total : <span>$<?php echo $grand_total; ?>/-</span> </div>

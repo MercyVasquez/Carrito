@@ -82,7 +82,7 @@ if(isset($_GET['delete_all'])){
       $grand_total += $sub_total;
          }
       }else{
-         echo '<p class="empty">your cart is empty</p>';
+         echo '<p class="empty">No haz agregado nada >:I </p>';
       }
       ?>
    </div>
