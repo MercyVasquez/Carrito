@@ -39,6 +39,20 @@ if(!isset($admin_id)){
 
    <div class="box-container">
 
+   <div class="box">
+         <?php
+            $total_all = 0;
+            $select_all = mysqli_query($conn, "SELECT total_price FROM `orders`") or die('query failed');
+            if(mysqli_num_rows($select_all) > 0){
+               while($fetch_all = mysqli_fetch_assoc($select_all)){
+                  $total_price = $fetch_all['total_price'];
+                  $total_all += $total_price;
+               };
+            };
+         ?>
+         <h3>$<?php echo $total_all; ?></h3>
+         <p>Pedidos</p>
+      </div>
       <div class="box">
          <?php
             $total_pendings = 0;
@@ -50,7 +64,7 @@ if(!isset($admin_id)){
                };
             };
          ?>
-         <h3>$<?php echo $total_pendings; ?>/-</h3>
+         <h3>$<?php echo $total_pendings; ?></h3>
          <p>Pendientes</p>
       </div>
 
@@ -65,8 +79,8 @@ if(!isset($admin_id)){
                };
             };
          ?>
-         <h3>$<?php echo $total_completed; ?>/-</h3>
-         <p>Pedidos completos</p>
+         <h3>$<?php echo $total_completed; ?></h3>
+         <p>Completos</p>
       </div>
 
       <div class="box">

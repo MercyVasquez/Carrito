@@ -57,38 +57,6 @@ if(!isset($user_id)){
    </div>
 
 </section>
-
-<section class="review">
-   
-<div class="review">
-   <div class="head-review">
-      <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
-   </div>
-   <div class="body-review">
-      <div class="name-review">Nathan D.</div>
-      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
-   </div>
-</div>
-<div class="review">
-   <div class="head-review">
-      <img src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" width="250px">
-   </div>
-   <div class="body-review">
-      <div class="name-review">Mary Will</div>
-      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
-   </div>
-</div>
-<div class="review">
-   <div class="head-review">
-      <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="250px">
-   </div>
-   <div class="body-review">
-      <div class="name-review">Kevin Tuck</div>
-      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
-   </div>
-</div>
-</section>
-
 <section class="Maps">
 
 <h1>Visitanos!</h1>

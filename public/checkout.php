@@ -37,7 +37,7 @@ if(isset($_POST['order_btn'])){
    $order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE name = '$name' AND number = '$number' AND email = '$email' AND method = '$method' AND address = '$address' AND total_products = '$total_products' AND total_price = '$cart_total'") or die('query failed');
 
    if($cart_total == 0){
-      $message[] = 'your cart is empty';
+      $message[] = 'Tu carrito esta vacio';
    }else{
       $pro_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
 
@@ -50,7 +50,7 @@ if(isset($_POST['order_btn'])){
          }
 
          mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
-         $message[] = 'order placed successfully!';
+         $message[] = 'orden completada!';
          mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
       }
    }
@@ -114,7 +114,7 @@ if(isset($_POST['order_btn'])){
             <input type="text" name="name" required placeholder="introduzca su nombre">
          </div>
          <div class="inputBox">
-            <span>Tu numero :</span>
+            <span>Telefono :</span>
             <input type="number" name="number" required placeholder="introduce tu numero">
          </div>
          <div class="inputBox">
@@ -131,11 +131,11 @@ if(isset($_POST['order_btn'])){
             </select>
          </div>
          <div class="inputBox">
-            <span>Direccion:</span>
+            <span>Casa o piso :</span>
             <input type="number" min="0" name="flat" required placeholder="ej. piso no.">
          </div>
          <div class="inputBox">
-            <span>Direccion:</span>
+            <span>Calle :</span>
             <input type="text" name="street" required placeholder="ej. nombre de calle">
          </div>
          <div class="inputBox">

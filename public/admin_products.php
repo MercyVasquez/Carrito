@@ -14,6 +14,7 @@ if(isset($_POST['add_product'])){
 
    $name = mysqli_real_escape_string($conn, $_POST['name']);
    $price = $_POST['price'];
+   $stock = $_POST['stock'];
    $image = $_FILES['image']['name'];
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
@@ -22,19 +23,19 @@ if(isset($_POST['add_product'])){
    $select_product_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = '$name'") or die('query failed');
 
    if(mysqli_num_rows($select_product_name) > 0){
-      $message[] = 'product name already added';
+      $message[] = 'producto ya existe';
    }else{
-      $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, image) VALUES('$name', '$price', '$image')") or die('query failed');
+      $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, image, stock) VALUES('$name', '$price', '$image','$stock')") or die('query failed');
 
       if($add_product_query){
          if($image_size > 2000000){
-            $message[] = 'image size is too large';
+            $message[] = 'imagen muy pesada';
          }else{
             move_uploaded_file($image_tmp_name, $image_folder);
-            $message[] = 'product added successfully!';
+            $message[] = 'producto agregado!';
          }
       }else{
-         $message[] = 'product could not be added!';
+         $message[] = 'no se pudo agregar!';
       }
    }
 }
@@ -53,8 +54,9 @@ if(isset($_POST['update_product'])){
    $update_p_id = $_POST['update_p_id'];
    $update_name = $_POST['update_name'];
    $update_price = $_POST['update_price'];
+   $update_stock = $_POST['update_stock'];
 
-   mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price' WHERE id = '$update_p_id'") or die('query failed');
+   mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price', stock='$update_stock' WHERE id = '$update_p_id'") or die('query failed');
 
    $update_image = $_FILES['update_image']['name'];
    $update_image_tmp_name = $_FILES['update_image']['tmp_name'];
@@ -64,7 +66,7 @@ if(isset($_POST['update_product'])){
 
    if(!empty($update_image)){
       if($update_image_size > 2000000){
-         $message[] = 'image file size is too large';
+         $message[] = 'imagen pesa mucho';
       }else{
          mysqli_query($conn, "UPDATE `products` SET image = '$update_image' WHERE id = '$update_p_id'") or die('query failed');
          move_uploaded_file($update_image_tmp_name, $update_folder);
@@ -106,7 +108,8 @@ if(isset($_POST['update_product'])){
    <form action="" method="post" enctype="multipart/form-data">
       <h3>Agregar manga</h3>
       <input type="text" name="name" class="box" placeholder="Nombre del manga" required>
-      <input type="number" min="0" name="price" class="box" placeholder="Precio del manga" required>
+      <input type="number" min="1" name="price" class="box" placeholder="Precio del manga" required>
+      <input type="number" min="1" name="stock" class="box" placeholder="Cantidad existente" required>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
       <input type="submit" value="Agregar manga" name="add_product" class="btn">
    </form>
@@ -129,15 +132,15 @@ if(isset($_POST['update_product'])){
       <div class="box">
          <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
          <div class="name"><?php echo $fetch_products['name']; ?></div>
-         <div class="name"><?php echo 'Stock: ', $fetch_products['stock']; ?></div>
-         <div class="price">$<?php echo $fetch_products['price']; ?>/-</div>
+         <div class="name"><?php echo 'Cantidad: ', $fetch_products['stock']; ?></div>
+         <div class="price">$ <?php echo $fetch_products['price']; ?></div>
          <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">Modifica</a>
-         <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">Elimina</a>
+         <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('borrar producto?');">Elimina</a>
       </div>
       <?php
          }
       }else{
-         echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">no hay productos!</p>';
       }
       ?>
    </div>
@@ -159,6 +162,7 @@ if(isset($_POST['update_product'])){
       <img src="uploaded_img/<?php echo $fetch_update['image']; ?>" alt="">
       <input type="text" name="update_name" value="<?php echo $fetch_update['name']; ?>" class="box" required placeholder="Nombre del manga">
       <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0" class="box" required placeholder="Precio del manga">
+      <input type="number" name="update_stock" value="<?php echo $fetch_update['stock']; ?>" min="0" class="box" required placeholder="Existencia del manga">
       <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png">
       <input type="submit" value="Aceptar" name="update_product" class="btn">
       <input type="reset" value="cancelar" id="close-update" class="option-btn">
