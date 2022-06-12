@@ -75,7 +75,7 @@ if(isset($_GET['delete'])){
             </select>
             <input type="submit" value="Modifica" name="update_order" class="option-btn">
             <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('print this order?');" class="delete-btn">Elimina</a>
-            <a href="" onClick="print();" class="option-btn"><i class="fa fa-print">Imprime</i></a>
+            <a href="" onClick="print();" class="option-btn"><i class="fa fa-print"> Imprime</i></a>
          </form>
       </div>
       <?php

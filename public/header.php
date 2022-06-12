@@ -15,7 +15,7 @@ if(isset($message)){
    <div class="header-1">
       <div class="flex">
          <div class="share">
-            <a href="https://www.facebook.com/nisakacomics" class="fab fa-facebook-f"></a>
+            <a href="https://www.facebook.com/nisakacomics" class="fab fa-facebook-square"></a>
             <a href="https://www.instagram.com/nisakacomicsrd/" class="fab fa-instagram"></a>
             <a href="https://www.instagram.com/mangastoprd/" class="fab fa-instagram"></a>
          </div>
