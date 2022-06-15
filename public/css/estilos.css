@@ -1,0 +1,58 @@
+.body{
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: coral;
+}
+
+.h1{
+	text-align: center;
+	margin-top: 30px;
+	width: 88%;
+	font-size: 40px;
+	color: #FFF;
+}
+
+.contentlist{
+	width: 90%;
+	display: flex;
+	overflow: auto;
+	border-radius: 8px;
+	max-width: 1200px;
+}
+
+.layerlist{
+	width: 248px;
+	height: 496px;
+	background: black;
+	padding: 24px;
+	border-radius: 8px;
+	margin-right: 30px;
+	color: white;
+}
+
+.h2{
+	font-size: 52px;
+	border-bottom: 2px solid coral;
+	width: 50%;
+}
+
+.songdetails{
+	padding: 24px 0px 24px 0px;
+}
+
+.songdetails h4{
+	font-size: 24px;
+}
+
+.songdetails h5{
+	font-size: 18px;
+	color: white;
+}
+
+.layerlist > img{
+	width: 200px;
+	height: 270px;
+	border-radius: 8px;
+}

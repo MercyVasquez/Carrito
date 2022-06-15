@@ -25,12 +25,6 @@ if(isset($_GET['delete'])){
    header('location:admin_orders.php');
 }
 
-if(isset($_GET['print'])){
-   $print_id = $_GET['print'];
-   mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$delete_id'") or die('query failed');
-   header('location:admin_orders.php');
-}
-
 ?>
 
 <!DOCTYPE html>

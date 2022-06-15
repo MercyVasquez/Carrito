@@ -23,14 +23,14 @@ if(!isset($user_id)){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- link del css -->
-   <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/homeprin.css">
    <link rel="stylesheet" href="css/estilos.css">
    <link rel="stylesheet" href="css/circle.css">
 
 </head>
 <body>
    
-<?php include 'header.php'; ?>
+<?php include 'headerprin.php'; ?>
 <section>
    <div class="circle"></div>
    <div class="content">
@@ -131,10 +131,8 @@ if(!isset($user_id)){
 <footer class="sticky-footer">
         <!-- <h2>Footer Stick to the Bottom</h2> -->
         <ul>
-            <li><a href="home.php">Inicio</a></li>
-            <li><a href="email">Contacto</a></li>
-            <li><a href="shop.php">Carrito</a></li>
-            <li><a href="checkout.php">Checkout</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="register">Registro</a></li>
             <li><a href="login">Login</a></li>
         </ul>
         <p> &copy; Copyright Mercy V - Jennifer G     <?php echo date('Y'); ?>.</p>

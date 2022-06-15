@@ -57,6 +57,54 @@ if(!isset($user_id)){
    </div>
 
 </section>
+<br>
+<div class="wrapper"> 
+    <div class="box"> 
+      <i class="fas fa-quote-left quote"></i> 
+      <p class="p">Ofrecer un servicio de calidad a nuestros cliente, siempre respetando sus necesidades y ofreciendo productos honestamente.       <i class="fas fa-quote-right quote"></i> </p> 
+      <br> <br>
+      <div class="content"> 
+        <div class="info"> 
+          <div class="name">Visión</div> 
+          <br>
+          <div class="job">Shimeji | Manga store</div> 
+        </div> 
+        <div class="image"> 
+          <img src="images/ed1.gif" alt=""> 
+        </div> 
+      </div> 
+    </div> 
+    <div class="box"> 
+      <i class="fas fa-quote-left quote"></i> 
+      <p class="p">Gracias a nuestros servicios y nuestro producto, a la vez de llegar nuestros clientes, surcar nuevos horizontes con nuestro negocio, ampliándonos moral y empresarialmente para as convertirnos en la empresa número uno, no en producción, sino para los clientes.      <i class="fas fa-quote-right quote"></i> </p> 
+      <div class="content"> 
+        <div class="info"> 
+          <div class="name">Objetivos</div> 
+          <br>
+          <div class="job">Shimeji | Manga store</div> 
+     
+        </div> 
+        <div class="image"> 
+          <img src="images/ed2.gif" alt=""> 
+        </div> 
+      </div> 
+    </div> 
+    <div class="box"> 
+      <i class="fas fa-quote-left  quote"></i> 
+      <p class="p">Poder convertirnos en una de las principales librerías a recurrir en el país, además de poder vender productos accesibles y de mejor calidad posible.       <i class="fas fa-quote-right quote"></i> </p> 
+      <br> <br>
+      <div class="content"> 
+        <div class="info"> 
+          <div class="name">Misión</div> 
+          <br>
+          <div class="job">Shimeji | Manga store</div> 
+        </div> 
+        <div class="image"> 
+          <img src="images/ed3.gif" alt=""> 
+        </div> 
+      </div> 
+    </div> 
+  </div>
 <section class="Maps">
 
 <h1>Visitanos!</h1>

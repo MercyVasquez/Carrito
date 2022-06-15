@@ -14,7 +14,7 @@ use App\Http\Controllers\MailerController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homeprin');
 });
 Route::get('/home', function () {
     return view('home');
@@ -58,7 +58,6 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
-
 
 Route::get('email', [MailerController::class, 'email'])->name('email'); 
 

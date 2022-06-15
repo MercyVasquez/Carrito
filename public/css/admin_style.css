@@ -26,7 +26,17 @@
    background-color: var(--coral);
    color:var(--white);
 }
+*::-moz-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+*::-moz-scrollbar-track{
+   background-color: transparent;
+}
 
+*::-moz-scrollbar-thumb{
+   background-color: coral;
+}
 *::-webkit-scrollbar{
    height: .5rem;
    width: 1rem;

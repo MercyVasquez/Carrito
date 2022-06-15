@@ -80,7 +80,7 @@ if(isset($_POST['add_to_cart'])){
       <?php
          }
       }else{
-         echo '<p class="empty">Soy el Dios de la versatilidad PRAAAAAA!!!!</p>';
+         echo '<p class="empty">no hay :c</p>';
       }
       ?>
    </div>
