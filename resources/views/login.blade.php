@@ -34,23 +34,14 @@ if(isset($message)){
             @csrf
                 <input class="input" type="email" placeholder="Gmail" name="email" required>
                 <input class="input" type="password" placeholder="Contraseña" name="password" required>
-                <span class="msg-error error"></span>
-                <div id="recaptcha" class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
-                <input type="submit" name="submit" value="Entrar" class="btn">
+               <input type="submit" name="submit" value="Entrar" class="btn">
                 <p>Ya tienes una cuenta? <span class="span"><a href="register">Click aqui!</a></span></p>
             </form>
           </div>
             <img class="image-container" src="images/844213.png" alt="">
       </div>
 </div>
-<script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
-    <script>
-      grecaptcha.ready(() => {
-        grecaptcha.render('html_element', {
-           'sitekey' : '6LdbZmogAAAAAHGyn8Q5kwzrZvKPZguOg8G0aeBY'
-        });
-      });
-    </script>
+
     </script>
 </body>
 </html>
