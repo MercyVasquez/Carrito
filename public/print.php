@@ -64,19 +64,11 @@ if(isset($_GET['delete'])){
          <p> Email : <span><?php echo $fetch_orders['email']; ?></span> </p>
          <p> Direccion : <span><?php echo $fetch_orders['address']; ?></span> </p>
          <p> Productos : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-         <p> Precio total : <span>$<?php echo $fetch_orders['total_price']; ?>/-</span> </p>
+         <p> Precio total : <span>$<?php echo $fetch_orders['total_price']; ?></span> </p>
          <p> Metodo de pago : <span><?php echo $fetch_orders['method']; ?></span> </p>
-         <form action="" method="post">
-            <input type="hidden" name="order_id" value="<?php echo $fetch_orders['id']; ?>">
-            <select name="update_payment">
-               <option value="" selected disabled><?php echo $fetch_orders['payment_status']; ?></option>
-               <option value="pending">Pendiente</option>
-               <option value="completed">Completado</option>
-            </select>
-            <input type="submit" value="Modifica" name="update_order" class="option-btn">
-            <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('print this order?');" class="delete-btn">Elimina</a>
-            <a href="" onClick="print();" class="option-btn"><i class="fa fa-print"> Imprime</i></a>
-         </form>
+         <p> Estado: <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
+        
+           <a href="" onClick="print();" class="option-btn"><i class="fa fa-print"> Imprime</i></a>
       </div>
       <?php
          }
