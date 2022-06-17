@@ -27,17 +27,17 @@ class MailerController extends Controller
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';             //  smtp host
                 $mail->SMTPAuth = true;
-                $mail->Username = 'mercidalmanzar@gmail.com';   //  sender username
-                $mail->Password = 'luzmaribel4';       // sender password
+                $mail->Username = '2180001@ipisa.edu.do';   //  sender username
+                $mail->Password = 'Abc123456';       // sender password
                 $mail->SMTPSecure = 'ssl';                  // encryption - ssl/tls
                 $mail->Port = 465;                          // port - 587/465
     
-                $mail->setFrom('mercidalmanzar@gmail.com', 'Para Mercy');
+                $mail->setFrom('mercidalmanzar@gmail.com', 'Para Shimeji');
                 $mail->addAddress($request->emailRecipient);
                 $mail->addCC('mercidalmanzar@gmail.com');
                 $mail->addBCC('mercidalmanzar@gmail.com');
     
-                $mail->addReplyTo('mercidalmanzar@gmail.com', 'De Mercy');
+                $mail->addReplyTo('mercidalmanzar@gmail.com', 'De Cliente');
                if(isset($_FILES['emailAttachments'])) {
                     for ($i=0; $i < count($_FILES['emailAttachments']['tmp_name']); $i++) {
                         $mail->addAttachment($_FILES['emailAttachments']['tmp_name'][$i], $_FILES['emailAttachments']['name'][$i]);
