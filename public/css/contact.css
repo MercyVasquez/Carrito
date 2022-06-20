@@ -13,7 +13,17 @@
    text-decoration: none;
    transition:all .2s linear;
 }
+*::-moz-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+*::-moz-scrollbar-track{
+   background-color: transparent;
+}
 
+*::-moz-scrollbar-thumb{
+   background-color: coral;
+}
 *::selection{
    background-color: coral;
    color:#fff;

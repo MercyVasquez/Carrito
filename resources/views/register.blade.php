@@ -43,7 +43,7 @@ if(isset($message)){
                 <input class="input" type="password"placeholder="Contraseña" name="password" required>
                 <input class="input" type="password" placeholder="Confirma Contraseña" name="cpassword" required>
                 <input type="submit" name="submit" value="Registrate" class="btn">
-                <p>Ya tienes una cuenta? <span class="span"><a href="">Click aqui!</a></span></p>
+                <p>Ya tienes una cuenta? <span class="span"><a href="login">Click aqui!</a></span></p>
             </form>
           </div>
           <img class="image-container" src="images/registerimage.jpg" alt="">

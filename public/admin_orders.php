@@ -74,8 +74,8 @@ if(isset($_GET['delete'])){
                <option value="completed">Completado</option>
             </select>
             <input type="submit" value="Modifica" name="update_order" class="option-btn">
-            <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('print this order?');" class="delete-btn">Elimina</a>
-            <a href="print.php?print=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('print this order?');" class="option-btn">Factura</a>
+            <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('borrar?');" class="delete-btn">Elimina</a>
+            <a href="print.php?print=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('imprimir?');" class="option-btn">Factura</a>
          </form>
       </div>
       <?php

@@ -7,7 +7,7 @@
    <title>Login</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   <link rel="icon" href="images/Logo.jpg" type="image/x-icon">
+   <link rel="icon" href="images/loguito.png">
    <link rel="stylesheet" href="css/login.css">
 
 </head>
@@ -35,7 +35,7 @@ if(isset($message)){
                 <input class="input" type="email" placeholder="Gmail" name="email" required>
                 <input class="input" type="password" placeholder="Contraseña" name="password" required>
                <input type="submit" name="submit" value="Entrar" class="btn">
-                <p>Ya tienes una cuenta? <span class="span"><a href="register">Click aqui!</a></span></p>
+                <p>No tienes una cuenta? <span class="span"><a href="register">Click aqui!</a></span></p>
             </form>
           </div>
             <img class="image-container" src="images/844213.png" alt="">

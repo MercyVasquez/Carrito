@@ -66,7 +66,7 @@
 			<h2 class="h2">01</h2>
 			<div class="songdetails">
 				<h4>BJ Alex</h4>
-				<h5>Album Name</h5>
+				<h5>Webmanga</h5>
 			</div>
 			<img src="./images/bj-alex-1.jpg" alt="imageAlbum">
 		</div>
@@ -74,7 +74,7 @@
 			<h2 class="h2">02</h2>
 			<div class="songdetails">
 				<h4>Pintor nocturno</h4>
-				<h5>Album Name</h5>
+				<h5>Webmanga</h5>
 			</div>
 			<img src="./images/pintor.jpg" alt="imageAlbum">
 		</div>
@@ -82,7 +82,7 @@
 			<h2 class="h2">03</h2>
 			<div class="songdetails">
 				<h4>King's maker</h4>
-				<h5>Album Name</h5>
+				<h5>Webmanga</h5>
 			</div>
 			<img src="./images/king.jpg" alt="imageAlbum">
 		</div>
