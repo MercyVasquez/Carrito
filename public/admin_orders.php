@@ -71,6 +71,7 @@ if(isset($_GET['delete'])){
             <select name="update_payment">
                <option value="" selected disabled><?php echo $fetch_orders['payment_status']; ?></option>
                <option value="pending">Pendiente</option>
+               <option value="in coming">Enviando</option>
                <option value="completed">Completado</option>
             </select>
             <input type="submit" value="Modifica" name="update_order" class="option-btn">

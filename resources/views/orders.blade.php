@@ -57,7 +57,7 @@ if(!isset($user_id)){
          <p> Metodo : <span><?php echo $fetch_orders['method']; ?></span> </p>
          <p> Ordenes : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
          <p> total a pagar : <span>$<?php echo $fetch_orders['total_price']; ?></span> </p>
-         <p> Estado: <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
+         <p> Estado: <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else if($fetch_orders['payment_status'] == 'in coming'){echo 'gray';} else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
          </div>
       <?php
        }
