@@ -34,6 +34,9 @@ Route::get('/cart', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/abouthome', function () {
+    return view('about2');
+});
 Route::get('/admin_contacts', function () {
     return view('admin_contacts');
 });

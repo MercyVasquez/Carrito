@@ -26,7 +26,10 @@ if(isset($message)){
    <div class="header-2">
       <div class="flex">
          <a href="home.php" class="logo">SHIMEJIRD</a>
-
+         <nav class="navbar">
+            <a href="/">Inicio</a>
+            <a href="abouthome">Nosotros</a>
+         </nav>
          <div class="icons">
             <div id="user-btn" class="fas fa-book">
             </div>
